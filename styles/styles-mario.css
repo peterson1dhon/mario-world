@@ -10,16 +10,15 @@
 
 .game-board {
   width: 100vw;
-  height: 95vh;
-  border: .1rem solid #333;
+  height: 500px;
   margin: 0 auto;
   position: relative;
-  background-image: url(../assets/images/background-mario.png);
+  background: url(../assets/images/background-mario.png);
 }
 
 .pipe{
   position: absolute;
-  bottom: 12.2rem;
+  bottom: 5rem;
   width: 8rem;
   margin: -15px;
   animation: pipe-animation 2s infinite linear;
@@ -28,15 +27,28 @@
 .mario{
   width: 10rem;
   position: absolute;
-  bottom: 12.2rem;
+  bottom: 5rem;
 }
 
-@keyframes mario-jump{
+.jump{
+  animation: jump 500ms ease-out; 
+}
+
+@keyframes jump{
   0%{
-    bottom: 0;  
+    bottom: 5rem;  
+  }
+  40%{
+    bottom: 20rem;
   }
   50%{
-    bottom: 18rem;
+    bottom: 20rem;
+  }
+  60%{
+    bottom: 20rem;
+  }
+  100%{
+    bottom: 12.2rem;
   }
 }
 
