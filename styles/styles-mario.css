@@ -9,19 +9,35 @@
 }
 
 .game-board {
-  width: 80%;
-  height: 50rem;
+  width: 100vw;
+  height: 95vh;
   border: .1rem solid #333;
   margin: 0 auto;
   position: relative;
+  background-image: url(../assets/images/background-mario.png);
 }
 
 .pipe{
   position: absolute;
-  bottom: 0;
+  bottom: 12.2rem;
   width: 8rem;
   margin: -15px;
-  /* animation: pipe-animation 2s infinite linear; */
+  animation: pipe-animation 2s infinite linear;
+}
+
+.mario{
+  width: 10rem;
+  position: absolute;
+  bottom: 12.2rem;
+}
+
+@keyframes mario-jump{
+  0%{
+    bottom: 0;  
+  }
+  50%{
+    bottom: 18rem;
+  }
 }
 
 @keyframes pipe-animation{
@@ -29,6 +45,6 @@
     right: 0;
   }
   to{
-    right: 100%;
+    right: 92%;
   }
 }
