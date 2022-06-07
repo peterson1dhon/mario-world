@@ -10,7 +10,7 @@
 
 
 .game-board {
-  width: 90%;
+  width: 100%;
   height: 455px;
   border: 1px solid #333;
   margin: 0 auto;
@@ -30,6 +30,12 @@
   width: 13rem;
   position: absolute;
   bottom: .5rem;
+}
+
+.clouds{
+  position: absolute;
+  width: 47rem;
+  animation: clouds-animation 15s infinite linear;
 }
 
 .jump{
@@ -62,3 +68,12 @@
     right: 100%;
   }
 }
+
+@keyframes clouds-animation{
+  from{
+    right: -40rem;
+    }
+    to{
+      right: 100%;
+    }
+  }
