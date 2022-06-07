@@ -8,55 +8,57 @@
   font-size: 62.5%;
 }
 
+
 .game-board {
-  width: 100vw;
-  height: 500px;
+  width: 90%;
+  height: 455px;
+  border: 1px solid #333;
   margin: 0 auto;
   position: relative;
   background: url(../assets/images/background-mario.png);
+  overflow: hidden;
 }
 
 .pipe{
   position: absolute;
-  bottom: 5rem;
-  width: 8rem;
-  margin: -15px;
-  animation: pipe-animation 2s infinite linear;
+  bottom: 0;
+  width: 5rem;
+  animation: pipe-animation 1.5s infinite linear;
 }
 
 .mario{
-  width: 10rem;
+  width: 13rem;
   position: absolute;
-  bottom: 5rem;
+  bottom: .5rem;
 }
 
 .jump{
-  animation: jump 500ms ease-out; 
+  animation: jump 500ms infinite ease-out; 
 }
 
 @keyframes jump{
   0%{
-    bottom: 5rem;  
+    bottom: 0;  
   }
   40%{
-    bottom: 20rem;
+    bottom: 180px;
   }
   50%{
-    bottom: 20rem;
+    bottom: 180px;
   }
   60%{
-    bottom: 20rem;
+    bottom: 180px;
   }
   100%{
-    bottom: 12.2rem;
+    bottom: 0;
   }
 }
 
 @keyframes pipe-animation{
   from{
-    right: 0;
+    right: -80px;
   }
   to{
-    right: 92%;
+    right: 100%;
   }
 }
